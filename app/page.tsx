@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Baby, ChevronDown, CirclePlus, ExternalLink, MapPin, Menu, MessageCircle, Navigation, Play, ScanFace, Smile, Star, Stethoscope, X, type LucideIcon } from "lucide-react";
+import { Baby, ChevronDown, CirclePlus, ExternalLink, MapPin, Menu, MessageCircle, Navigation, ScanFace, Smile, Star, Stethoscope, X, type LucideIcon } from "lucide-react";
 import { useState } from "react";
 
 const whatsapp = "https://wa.me/5521993770229?text=Ol%C3%A1%2C%20LB%20Odontologia!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.";
@@ -64,16 +64,8 @@ export default function Home() {
         <Reveal><p className="text-sm font-bold uppercase tracking-[.16em] text-[#9a5e25]">Procedimentos</p><h2 className="mt-4 text-4xl font-black text-[#29353a] sm:text-5xl">Resultados que valorizam você.</h2><p className="mt-5 max-w-xl text-lg leading-relaxed text-[#5f6664]">Cada procedimento é conduzido com planejamento, técnica e atenção aos detalhes para preservar a sua identidade.</p></Reveal>
         <div className="mt-12 grid gap-5 lg:grid-cols-2">
           {procedureCases.map((item, index) => <Reveal key={item.image} delay={index * .08} className="overflow-hidden rounded-2xl border border-[#c6a06a]/25 bg-[#fbf8f1] p-3 shadow-lg shadow-[#9a6a32]/10"><Image src={item.image} alt={item.alt} width={1280} height={1184} className="h-auto w-full" sizes="(max-width: 1024px) 100vw, 50vw" /></Reveal>)}
-          <Reveal delay={.1} className="flex min-h-52 items-center justify-center rounded-2xl border border-dashed border-[#c6a06a]/45 bg-[#fffdf8] p-8 text-center"><p className="max-w-xs text-sm leading-relaxed text-[#5f6664]">Novos casos poderão ser incluídos aqui, preservando a mesma galeria de resultados.</p></Reveal>
         </div>
         <p className="mt-6 text-sm leading-relaxed text-[#68716f]">Os resultados podem variar de acordo com as características e necessidades de cada pessoa.</p>
-      </div>
-    </section>
-
-    <section className="bg-[#edf3f2] py-24 lg:py-32">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 md:px-8 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
-        <Reveal><p className="text-sm font-bold uppercase tracking-[.16em] text-[#9a5e25]">Resultado em vídeo</p><h2 className="mt-4 text-4xl font-black text-[#29353a] sm:text-5xl">Veja o cuidado em movimento.</h2><p className="mt-5 max-w-md text-lg leading-relaxed text-[#5f6664]">Assista a um resultado realizado pela equipe. Toque no player para começar.</p></Reveal>
-        <Reveal delay={.1} className="overflow-hidden rounded-2xl border border-[#c6a06a]/30 bg-[#fffdf8] p-3 shadow-lg shadow-[#9a6a32]/10"><div className="relative overflow-hidden rounded-xl"><video className="aspect-[9/16] w-full bg-[#173a52] object-contain" controls preload="metadata" poster="/patient-after.png" aria-label="Resultado em vídeo de procedimento odontológico da LB Odontologia"><source src="/resultado-dentes.mp4" type="video/mp4" />Seu navegador não suporta vídeo.</video><span className="pointer-events-none absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-[#fbf9f4]/95 px-3 py-2 text-xs font-bold uppercase tracking-[.12em] text-[#244e63]"><Play size={14} fill="currentColor" /> Resultado em vídeo</span></div></Reveal>
       </div>
     </section>
 
